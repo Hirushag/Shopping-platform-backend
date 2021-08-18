@@ -47,7 +47,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
+       adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
@@ -119,6 +119,7 @@ module.exports = {
   ***************************************************************************/
   blueprints: {
     shortcuts: false,
+    rest: false,
   },
 
 
@@ -254,6 +255,7 @@ module.exports = {
     //   'https://example.com',
     //   'https://staging.example.com',
     // ],
+    onlyAllowOrigins: ["http://localhost:4200"],
 
 
     /***************************************************************************
@@ -340,7 +342,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  // port: 80,
+   port: 1420,
 
 
 
@@ -373,24 +375,7 @@ module.exports = {
   * > See config/custom.js for more info on how to configure these options. *
   *                                                                         *
   ***************************************************************************/
-  custom: {
-    baseUrl: 'https://example.com',
-    internalEmailAddress: 'support@example.com',
-
-    // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
-    // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',
-    //--------------------------------------------------------------------------
-    // /\   OR, to avoid checking them in to version control, you might opt to
-    // ||   set sensitive credentials like these using environment variables.
-    //
-    // For example:
-    // ```
-    // sendgridSecret=SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU
-    // sails_custom__stripeSecret=sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm
-    // ```
-    //--------------------------------------------------------------------------
-
-  },
+ 
 
 
 
