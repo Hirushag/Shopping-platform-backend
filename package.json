@@ -9,15 +9,18 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "grunt": "1.0.4",
+    "jsonwebtoken": "^8.3.0",
     "moment": "^2.29.1",
     "sails": "^1.4.3",
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^3.0.2",
     "sails-hook-sockets": "^2.0.0",
-    "sails-mysql": "^1.0.2"
+    "sails-mysql": "^1.0.2",
+    "async": "2.0.1",
+    "node-ses": "^3.0.3"
   },
   "devDependencies": {
-    "eslint": "5.16.0"
+    "@sailshq/eslint": "^4.19.3"
   },
   "scripts": {
     "start": "NODE_ENV=production node app.js",
@@ -36,3 +39,4 @@
     "node": "^14.16"
   }
 }
+
