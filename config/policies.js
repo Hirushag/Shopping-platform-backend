@@ -9,14 +9,29 @@
  */
 
 module.exports.policies = {
-
   /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions, unless overridden.       *
-  * (`true` allows public access)                                            *
-  *                                                                          *
-  ***************************************************************************/
+   *                                                                          *
+   * Default policy for all controllers and actions, unless overridden.       *
+   * (`true` allows public access)                                            *
+   *                                                                          *
+   ***************************************************************************/
 
-  // '*': true,
+  "*": ["isAuthorized"], // Everything resctricted here
 
+  UserController: {
+    login: true,
+  },
+
+  "Item-DetailsController": {
+    "get-available-menu-items-by-category": true,
+  },
+  ItemCategoriesController: {
+    "get-all-categories": true,
+  },
+  UserRegController: {
+    register: true,
+  },
+  RegisterController: {
+    "create-user": true,
+  },
 };
