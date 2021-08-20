@@ -16,6 +16,11 @@ module.exports = {
       required: true,
       type: "string",
     },
+    username: {
+      required: true,
+      type: "string",
+    },
+
     userlevel: {
       required: true,
       type: "number",
@@ -33,6 +38,8 @@ module.exports = {
   },
 
   fn: async function (inputs, exits) {
+
+
     if (this.req.token.userlevel >= 8) {
       // Look up the user with this id.
       var userRecord = await User.findOne({ id: inputs.id });
@@ -44,12 +51,19 @@ module.exports = {
         });
       }
 
+      if(inputs.userlevel == 2){
+        var userLevel = 1
+      }else if(inputs.userlevel == 1){
+        var userLevel = 10
+      }
+
       // update the user
       await User.update({ id: inputs.id })
         .set({
           firstname: inputs.firstname,
           lastname: inputs.lastname,
-          userlevel: inputs.userlevel,
+          username:inputs.username,
+          userlevel: userLevel,
         })
         .intercept("E_UNIQUE", (err) => {
           // Return a modified error here (or a special exit signal)

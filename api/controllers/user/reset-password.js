@@ -48,7 +48,7 @@ module.exports = {
       // update the user with new password
       await User.update({ id: inputs.id })
         .set({
-          password: await sails.helpers.passwords.hashPassword(inputs.password)
+          password:inputs.password
         }).intercept((err) => {
           // Return a modified error here (or a special exit signal)
           // return err;
