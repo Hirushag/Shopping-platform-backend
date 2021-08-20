@@ -79,6 +79,27 @@ module.exports.routes = {
   "GET /api/v1/client/get-all-clients": { action: "client/get-all-clients" },
   "POST /api/v1/client/edit-client": { action: "client/edit-client" },
 
+  //Payments
+  "GET /api/v1/payment/get-all-payment": { action: "payment/get-all-payment" },
+  "GET /api/v1/payment/get-payment": { action: "payment/get-payment" },
+  "POST /api/v1/payment/update-payment-status": {
+    action: "payment/update-payment-status",
+  },
+
+  //cart
+
+  "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
+
+  "GET /api/v1/cart/get-cart-items": { action: "cart/get-cart-items" },
+
+  "POST /api/v1/cart/update-quantity": { action: "cart/update-quantity" },
+  "POST /api/v1/cart/delete-item": { action: "cart/delete-item" },
+
+  "GET /api/v1/cart/calculate-totals": { action: "cart/calculate-totals" },
+
+  "POST /api/v1/cart/add-delivery-details": {
+    action: "cart/add-delivery-details",
+  },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
