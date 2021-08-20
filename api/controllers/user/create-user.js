@@ -54,7 +54,7 @@ module.exports = {
       firstname: inputs.firstname,
       lastname: inputs.lastname,
       username: inputs.username,
-      password: await sails.helpers.passwords.hashPassword(inputs.password),
+      password: inputs.password,
       userlevel: new_userlevel,
     })
       .intercept("E_UNIQUE", "usernameAlreadyInUse")
