@@ -20,6 +20,7 @@ module.exports = {
     phone: { type: "string", allowNull: true },
     company_address: { type: "string", allowNull: true },
     status: { type: "number", allowNull: true },
+    created_by: { model:"User" },
 
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

@@ -23,7 +23,7 @@ module.exports = {
 
 
   fn: async function(inputs, exits) {
-    var supplier = await Suppliers.findOne({ id: inputs.id });
+    var supplier = await Suppliers.findOne({ id: inputs.id }).populate("created_by");
 
     if (!supplier) {
       return exits.success({
