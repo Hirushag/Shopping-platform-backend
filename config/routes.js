@@ -109,6 +109,39 @@ module.exports.routes = {
   'POST /api/v1/suppliers/edit-supplier': { action: 'suppliers/edit-supplier' },
   'POST /api/v1/suppliers/update-status': { action: 'suppliers/update-status' },
 
+   //item categories Endpoints
+   "GET /api/v1/itemCategories/get-all-categories": {
+    action: "itemCategories/get-all-categories",
+  },
+  "GET /api/v1/itemCategories/get-category": {
+    action: "itemCategories/get-category",
+  },
+  "POST /api/v1/itemCategories/add-category": {
+    action: "itemCategories/add-category",
+  },
+  "POST /api/v1/itemCategories/edit-category": {
+    action: "itemCategories/edit-category",
+  },
+  "POST /api/v1/itemCategories/edit-sub-category": {
+    action: "itemCategories/edit-sub-category",
+  },
+
+  // Sub Category Endpoints
+  "POST /api/v1/itemCategories/add-sub-category": {
+    action: "itemCategories/add-sub-category",
+  },
+  "POST /api/v1/itemCategories/edi-sub-category": {
+    action: "itemCategories/edit-sub-category",
+  },
+  "POST /api/v1/itemCategories/get-all-sub-categories": {
+    action: "itemCategories/get-all-sub-categories",
+  },
+
+  "POST /api/v1/itemCategories/update-category-sort-order": {
+    action: "itemCategories/update-category-sort-order",
+  },
+
+
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
