@@ -103,14 +103,16 @@ module.exports.routes = {
 
   //suppliers
 
-  'POST /api/v1/suppliers/add-supplier': { action: 'suppliers/add-supplier' },
-  'GET /api/v1/suppliers/get-all-suppliers': { action: 'suppliers/get-all-suppliers' },
-  'POST /api/v1/suppliers/get-supplier': { action: 'suppliers/get-supplier' },
-  'POST /api/v1/suppliers/edit-supplier': { action: 'suppliers/edit-supplier' },
-  'POST /api/v1/suppliers/update-status': { action: 'suppliers/update-status' },
+  "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
+  "GET /api/v1/suppliers/get-all-suppliers": {
+    action: "suppliers/get-all-suppliers",
+  },
+  "POST /api/v1/suppliers/get-supplier": { action: "suppliers/get-supplier" },
+  "POST /api/v1/suppliers/edit-supplier": { action: "suppliers/edit-supplier" },
+  "POST /api/v1/suppliers/update-status": { action: "suppliers/update-status" },
 
-   //item categories Endpoints
-   "GET /api/v1/itemCategories/get-all-categories": {
+  //item categories Endpoints
+  "GET /api/v1/itemCategories/get-all-categories": {
     action: "itemCategories/get-all-categories",
   },
   "GET /api/v1/itemCategories/get-category": {
@@ -141,6 +143,38 @@ module.exports.routes = {
     action: "itemCategories/update-category-sort-order",
   },
 
+  //supplier
+  "POST /api/v1/inventory/get-suppliers-by-category": {
+    action: "inventory/get-suppliers-by-category",
+  },
+
+  "GET /api/v1/inventory/get-all-products": {
+    action: "inventory/get-all-products",
+  },
+
+  "GET /api/v1/inventory/get-maintype": {
+    action: "inventory/get-maintype",
+  },
+
+  "POST /api/v1/inventory/create-inventory": {
+    action: "inventory/create-inventory",
+  },
+  "GET /api/v1/inventory/get-inventory": { action: "inventory/get-inventory" },
+  "POST /api/v1/inventory/edit-inventory": {
+    action: "inventory/edit-inventory",
+  },
+  "POST /api/v1/inventory/update-product-image": {
+    action: "inventory/update-product-image",
+  },
+  "POST /api/v1/inventory/upload-image": {
+    action: "inventory/upload-image",
+  },
+
+  "POST /api/v1/item-details/get-available-menu-items-by-category": {
+    action: "item-details/get-available-menu-items-by-category",
+  },
+
+  "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
