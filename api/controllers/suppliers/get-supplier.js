@@ -1,36 +1,28 @@
 module.exports = {
+  friendlyName: "Get supplier",
 
-
-  friendlyName: 'Get supplier',
-
-
-  description: '',
-
+  description: "",
 
   inputs: {
-
     id: {
       required: true,
-      type: "number"
-    }
-
+      type: "number",
+    },
   },
 
+  exits: {},
 
-  exits: {
-
-  },
-
-
-  fn: async function(inputs, exits) {
-    var supplier = await Suppliers.findOne({ id: inputs.id }).populate("created_by");
+  fn: async function (inputs, exits) {
+    var supplier = await Suppliers.findOne({ id: inputs.id })
+      .populate("created_by")
+      .populate("category");
 
     if (!supplier) {
       return exits.success({
-        status: false
+        status: false,
       });
     } else {
       return exits.success(supplier);
     }
-  }
+  },
 };

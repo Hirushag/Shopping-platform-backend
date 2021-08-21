@@ -1,26 +1,15 @@
 module.exports = {
+  friendlyName: "Get all suppliers",
 
+  description: "",
 
-  friendlyName: 'Get all suppliers',
+  inputs: {},
 
+  exits: {},
 
-  description: '',
-
-
-  inputs: {
-
-  },
-
-
-  exits: {
-
-  },
-
-
-  fn: async function(inputs, exits) {
-    var suppliers = await Suppliers.find()
-      .sort("id ASC");
+  fn: async function (inputs, exits) {
+    var suppliers = await Suppliers.find().populate("category").sort("id ASC");
 
     return exits.success(suppliers);
-  }
+  },
 };

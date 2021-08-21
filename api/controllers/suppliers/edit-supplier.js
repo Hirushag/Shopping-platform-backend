@@ -1,14 +1,9 @@
 module.exports = {
+  friendlyName: "Edit supplier",
 
-
-  friendlyName: 'Edit supplier',
-
-
-  description: '',
-
+  description: "",
 
   inputs: {
-
     id: {
       required: true,
       type: "number",
@@ -25,9 +20,11 @@ module.exports = {
       allowNull: true,
       type: "string",
     },
-
+    category: {
+      allowNull: true,
+      type: "number",
+    },
   },
-
 
   exits: {
     AlreadyExist: {
@@ -37,9 +34,7 @@ module.exports = {
     OtherError: {
       responseType: "HandleError",
     },
-
   },
-
 
   fn: async function (inputs, exits) {
     // Look up the vehicle with this id.
@@ -58,6 +53,7 @@ module.exports = {
         supplier_name: inputs.supplier_name,
         phone: inputs.phone,
         company_address: inputs.address,
+        category: inputs.category,
       })
       .intercept("E_UNIQUE", (err) => {
         // Return a modified error here (or a special exit signal)
