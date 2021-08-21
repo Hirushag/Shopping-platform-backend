@@ -100,6 +100,13 @@ module.exports.routes = {
   "POST /api/v1/cart/add-delivery-details": {
     action: "cart/add-delivery-details",
   },
+
+  //suppliers
+
+  'POST /api/v1/suppliers/add-supplier': { action: 'suppliers/add-supplier' },
+  'GET /api/v1/suppliers/get-all-suppliers': { action: 'suppliers/get-all-suppliers' },
+  'POST /api/v1/suppliers/get-supplier': { action: 'suppliers/get-supplier' },
+  'POST /api/v1/suppliers/edit-supplier': { action: 'suppliers/edit-supplier' },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
