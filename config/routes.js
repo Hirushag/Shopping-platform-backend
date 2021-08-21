@@ -107,6 +107,8 @@ module.exports.routes = {
   'GET /api/v1/suppliers/get-all-suppliers': { action: 'suppliers/get-all-suppliers' },
   'POST /api/v1/suppliers/get-supplier': { action: 'suppliers/get-supplier' },
   'POST /api/v1/suppliers/edit-supplier': { action: 'suppliers/edit-supplier' },
+  'POST /api/v1/suppliers/update-status': { action: 'suppliers/update-status' },
+
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝

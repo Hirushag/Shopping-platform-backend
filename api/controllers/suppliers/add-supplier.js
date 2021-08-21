@@ -52,6 +52,7 @@ module.exports = {
       phone: inputs.phone,
       company_address: inputs.address,
       status: 1,
+      created_by:this.req.token.id
     }).fetch();
 
     var generatedid = supplier.id;
