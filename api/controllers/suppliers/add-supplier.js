@@ -1,14 +1,9 @@
 module.exports = {
+  friendlyName: "Add supplier",
 
-
-  friendlyName: 'Add supplier',
-
-
-  description: '',
-
+  description: "",
 
   inputs: {
-
     supplier_name: {
       required: true,
       type: "string",
@@ -21,23 +16,22 @@ module.exports = {
       required: true,
       type: "string",
     },
-
+    category: {
+      required: true,
+      type: "number",
+    },
   },
 
-
   exits: {
-
     OtherError: {
       responseType: "HandleError",
     },
-
   },
 
-
-  fn: async function (inputs,exits) {
-
-    var already_exist = await Suppliers.findOne({ supplier_name: inputs.supplier_name });
-
+  fn: async function (inputs, exits) {
+    var already_exist = await Suppliers.findOne({
+      supplier_name: inputs.supplier_name,
+    });
 
     if (already_exist) {
       return exits.OtherError({
@@ -51,8 +45,9 @@ module.exports = {
       supplier_name: inputs.supplier_name.toUpperCase(),
       phone: inputs.phone,
       company_address: inputs.address,
+      category: inputs.category,
       status: 1,
-      created_by:this.req.token.id
+      created_by: this.req.token.id,
     }).fetch();
 
     var generatedid = supplier.id;
@@ -71,9 +66,6 @@ module.exports = {
       info: "Created a Supplier:" + supplier.code,
     });
     // All done.
-    return exits.success({status:true,id:supplier.id});
-
-  }
-
-
+    return exits.success({ status: true, id: supplier.id });
+  },
 };
