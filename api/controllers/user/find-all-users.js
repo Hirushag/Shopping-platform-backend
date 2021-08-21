@@ -10,7 +10,7 @@ module.exports = {
   fn: async function (inputs, exits) {
     // Get all user accounts except rootadmin login
     var users = await User.find({
-      id: { ">": 1 },
+      userlevel: { ">": 1 },
     });
 
     var customers = await User.find({
