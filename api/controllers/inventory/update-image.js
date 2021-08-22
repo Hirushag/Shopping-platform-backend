@@ -12,7 +12,6 @@ module.exports = {
   exits: {},
 
   fn: async function (inputs, exits) {
-    console.log(inputs.blob);
     var invetory = await Inventory.findOne({ id: inputs.id });
 
     await Inventory.update({ id: inputs.id }).set({ image: inputs.blob });
