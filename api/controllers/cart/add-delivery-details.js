@@ -75,8 +75,6 @@ module.exports = {
   },
 
   fn: async function (inputs, exits) {
-    console.log(inputs.payment_method);
-
     if (inputs.payment_method == "CASH ON DELIVERY") {
       var payments = await Payment.create({
         method: inputs.payment_method,

@@ -20,6 +20,7 @@ module.exports.policies = {
 
   UserController: {
     login: true,
+    "create-user": true,
   },
 
   "Item-DetailsController": {
@@ -27,11 +28,5 @@ module.exports.policies = {
   },
   ItemCategoriesController: {
     "get-all-categories": true,
-  },
-  UserRegController: {
-    register: true,
-  },
-  RegisterController: {
-    "create-user": true,
   },
 };
