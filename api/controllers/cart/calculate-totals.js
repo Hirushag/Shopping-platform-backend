@@ -17,11 +17,8 @@ module.exports = {
       " 'AND t2.status = '0' " +
       " ";
 
-    console.log(cart);
     var cart_list = await sails.sendNativeQuery(cart);
     cart_list = cart_list.rows[0];
-
-    console.log(cart_list);
 
     var subtotal = cart_list;
 
