@@ -29,4 +29,7 @@ module.exports.policies = {
   ItemCategoriesController: {
     "get-all-categories": true,
   },
+  InventoryController: {
+    "upload-image": true,
+  },
 };
