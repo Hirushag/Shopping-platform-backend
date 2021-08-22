@@ -111,6 +111,10 @@ module.exports.routes = {
   "POST /api/v1/suppliers/edit-supplier": { action: "suppliers/edit-supplier" },
   "POST /api/v1/suppliers/update-status": { action: "suppliers/update-status" },
 
+  "POST /api/v1/suppliers/delete-supplier": {
+    action: "suppliers/delete-supplier",
+  },
+
   //item categories Endpoints
   "GET /api/v1/itemCategories/get-all-categories": {
     action: "itemCategories/get-all-categories",
@@ -137,6 +141,10 @@ module.exports.routes = {
   },
   "POST /api/v1/itemCategories/get-all-sub-categories": {
     action: "itemCategories/get-all-sub-categories",
+  },
+
+  "POST /api/v1/itemCategories/delete-sub-categories": {
+    action: "itemCategories/delete-sub-categories",
   },
 
   "POST /api/v1/itemCategories/update-category-sort-order": {
@@ -168,6 +176,10 @@ module.exports.routes = {
   },
   "POST /api/v1/inventory/upload-image": {
     action: "inventory/upload-image",
+  },
+
+  "POST /api/v1/inventory/delete-inventory": {
+    action: "inventory/delete-inventory",
   },
 
   "POST /api/v1/item-details/get-available-menu-items-by-category": {
