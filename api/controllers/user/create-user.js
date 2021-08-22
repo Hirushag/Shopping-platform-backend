@@ -46,8 +46,10 @@ module.exports = {
   fn: async function (inputs, exits) {
     if (inputs.userlevel == null || inputs.userlevel == "") {
       var new_userlevel = 1;
-    } else {
-      var new_userlevel = inputs.userlevel;
+    } else if (inputs.userlevel == 1) {
+      var new_userlevel = 10;
+    } else if (inputs.userlevel == 2) {
+      var new_userlevel = 1;
     }
 
     var newUserRecord = await User.create({
