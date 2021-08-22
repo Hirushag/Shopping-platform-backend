@@ -182,6 +182,8 @@ module.exports.routes = {
     action: "inventory/delete-inventory",
   },
 
+  "POST /api/v1/inventory/update-image": { action: "inventory/update-image" },
+
   "POST /api/v1/item-details/get-available-menu-items-by-category": {
     action: "item-details/get-available-menu-items-by-category",
   },
