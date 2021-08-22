@@ -28,8 +28,6 @@ module.exports = {
     console.log(inputs.item);
     var finditem = await CartItems.findOne({ id: inputs.item });
 
-    console.log(finditem);
-
     var new_quantity = finditem.quantity + inputs.quantity;
 
     var new_price = (finditem.price / finditem.quantity) * new_quantity;
@@ -40,8 +38,6 @@ module.exports = {
         price: new_price,
       })
       .fetch();
-
-    console.log(updateqty);
 
     // All done.
     return exits.success({
