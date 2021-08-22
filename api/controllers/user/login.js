@@ -46,6 +46,7 @@ module.exports = {
         username: userRecord.username,
         firstName: userRecord.firstname,
         lastName: userRecord.lastname,
+        userlevel: userRecord.userlevel,
         token: tokenIssued,
       },
     });
