@@ -23,9 +23,9 @@ module.exports = {
       responseType: "HandleError",
     },
   },
-
+  //function for update payment
   fn: async function (inputs, exits) {
-    //check for duplicate request
+    //check for duplicate payment request
     var uniqueRequest = await UniqueReq.create({
       uniquecheck: inputs.uniquekey,
     }).intercept("E_UNIQUE", () => {
@@ -35,6 +35,7 @@ module.exports = {
       });
     });
 
+    //get single payemnet by id
     var payment = await Payment.findOne({ id: inputs.id });
     if (!payment) {
       return exits.OtherError({
@@ -42,11 +43,12 @@ module.exports = {
         err: "Payment Record not found",
       });
     }
-
+    //update payement status
     var updatestatus = await Payment.update({ id: inputs.id }).set({
       status: inputs.status,
     });
 
+    //return
     return exits.success({
       status: true,
     });
