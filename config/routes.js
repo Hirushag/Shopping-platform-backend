@@ -160,10 +160,6 @@ module.exports.routes = {
     action: "inventory/get-all-products",
   },
 
-  "GET /api/v1/inventory/get-maintype": {
-    action: "inventory/get-maintype",
-  },
-
   "POST /api/v1/inventory/create-inventory": {
     action: "inventory/create-inventory",
   },
