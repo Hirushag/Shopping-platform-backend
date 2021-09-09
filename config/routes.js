@@ -101,6 +101,11 @@ module.exports.routes = {
     action: "cart/add-delivery-details",
   },
 
+  //delivery
+  "GET /delivery/view-all-deliveries": {
+    action: "delivery/view-all-deliveries",
+  },
+
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
