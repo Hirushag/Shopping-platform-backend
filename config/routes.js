@@ -106,6 +106,8 @@ module.exports.routes = {
     action: "delivery/view-all-deliveries",
   },
 
+  'POST /api/v1/delivery/update-delivery-status': { action: 'delivery/update-delivery-status' },
+
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
