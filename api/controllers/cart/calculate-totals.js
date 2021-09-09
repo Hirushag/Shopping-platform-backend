@@ -9,7 +9,9 @@ module.exports = {
 
   exits: {},
 
+  //cart total calculation
   fn: async function (inputs, exits) {
+    //sql quary for calculate cart total
     var cart =
       "SELECT sum(t1.price) as nettotal FROM cart_items t1 inner join cart t2 on t2.id = t1.cart_id " +
       " where t2.user = '" +
@@ -22,7 +24,7 @@ module.exports = {
 
     var subtotal = cart_list;
 
-    // All done.
+    //return sub total
     return exits.success(subtotal);
   },
 };

@@ -24,6 +24,7 @@ module.exports = {
     },
   },
 
+  //function for manage quantity
   fn: async function (inputs, exits) {
     console.log(inputs.item);
     var finditem = await CartItems.findOne({ id: inputs.item });
@@ -39,7 +40,7 @@ module.exports = {
       })
       .fetch();
 
-    // All done.
+    //return
     return exits.success({
       status: true,
     });

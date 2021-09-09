@@ -178,10 +178,6 @@ module.exports.routes = {
     action: "inventory/get-all-products",
   },
 
-  "GET /api/v1/inventory/get-maintype": {
-    action: "inventory/get-maintype",
-  },
-
   "POST /api/v1/inventory/create-inventory": {
     action: "inventory/create-inventory",
   },
@@ -208,6 +204,13 @@ module.exports.routes = {
 
   "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
 
+
+
+  //feedbacks
+  'POST /api/v1/feedbacks/add-feedback': { action: 'feedbacks/add-feedback' },
+
+  'POST /api/v1/feedbacks/edit-feedback': { action: 'feedbacks/edit-feedback' },
+  'POST /api/v1/feedbacks/delete-feedbacks': { action: 'feedbacks/delete-feedbacks' },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
