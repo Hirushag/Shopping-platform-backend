@@ -210,6 +210,7 @@ module.exports.routes = {
   'POST /api/v1/feedbacks/add-feedback': { action: 'feedbacks/add-feedback' },
 
   'POST /api/v1/feedbacks/edit-feedback': { action: 'feedbacks/edit-feedback' },
+  'POST /api/v1/feedbacks/delete-feedbacks': { action: 'feedbacks/delete-feedbacks' },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
