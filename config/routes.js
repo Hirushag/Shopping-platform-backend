@@ -108,6 +108,8 @@ module.exports.routes = {
 
   'POST /api/v1/delivery/update-delivery-status': { action: 'delivery/update-delivery-status' },
 
+  'POST /api/v1/delivery/get-delivery': { action: 'delivery/get-delivery' },
+
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
