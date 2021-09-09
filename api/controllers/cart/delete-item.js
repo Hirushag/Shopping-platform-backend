@@ -16,6 +16,7 @@ module.exports = {
 
   exits: {},
 
+  //delete cart items from cart
   fn: async function (inputs, exits) {
     await CartItems.destroy({ id: inputs.item });
 

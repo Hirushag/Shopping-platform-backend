@@ -37,7 +37,7 @@ module.exports = {
         uniquecheck: inputs.uniquekey,
       }).intercept(
         "E_UNIQUE",
-        () => "Request already completed. Please Refresh Categories"
+        () => "Request already completed. Please Refresh Categories!!"
       );
     } catch (e) {
       return exits.OtherError({

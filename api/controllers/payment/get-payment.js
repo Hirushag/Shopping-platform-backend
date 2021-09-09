@@ -15,11 +15,11 @@ module.exports = {
       responseType: "HandleError",
     },
   },
-
+  //function for get payment by id
   fn: async function (inputs, exits) {
-    // Look up the payment with this id.
     var payment = await Payment.findOne({ id: inputs.id }).populate("user");
 
+    //errors heandling
     if (!payment) {
       return exits.OtherError({
         status: false,
@@ -27,6 +27,7 @@ module.exports = {
       });
     }
 
+    //return
     return exits.success({
       payment: payment,
     });
