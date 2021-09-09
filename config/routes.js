@@ -116,46 +116,55 @@ module.exports.routes = {
   },
 
   //item categories Endpoints
+  //get all categories
   "GET /api/v1/itemCategories/get-all-categories": {
     action: "itemCategories/get-all-categories",
   },
+  //get categories
   "GET /api/v1/itemCategories/get-category": {
     action: "itemCategories/get-category",
   },
+  //add categories
   "POST /api/v1/itemCategories/add-category": {
     action: "itemCategories/add-category",
   },
+  //edit categories
   "POST /api/v1/itemCategories/edit-category": {
     action: "itemCategories/edit-category",
   },
+  //edit sub categories
   "POST /api/v1/itemCategories/edit-sub-category": {
     action: "itemCategories/edit-sub-category",
   },
 
   // Sub Category Endpoints
+  //add sub categories
   "POST /api/v1/itemCategories/add-sub-category": {
     action: "itemCategories/add-sub-category",
   },
+  //edit sub categories
   "POST /api/v1/itemCategories/edi-sub-category": {
     action: "itemCategories/edit-sub-category",
   },
+  //get all sub categories
   "POST /api/v1/itemCategories/get-all-sub-categories": {
     action: "itemCategories/get-all-sub-categories",
   },
-
+  //delete sub categories
   "POST /api/v1/itemCategories/delete-sub-categories": {
     action: "itemCategories/delete-sub-categories",
   },
-
+  //update categories- sort order
   "POST /api/v1/itemCategories/update-category-sort-order": {
     action: "itemCategories/update-category-sort-order",
   },
 
   //supplier
+  //get-suppliers-by-category
   "POST /api/v1/inventory/get-suppliers-by-category": {
     action: "inventory/get-suppliers-by-category",
   },
-
+  //get-all-products
   "GET /api/v1/inventory/get-all-products": {
     action: "inventory/get-all-products",
   },
