@@ -101,6 +101,15 @@ module.exports.routes = {
     action: "cart/add-delivery-details",
   },
 
+  //delivery
+  "GET /delivery/view-all-deliveries": {
+    action: "delivery/view-all-deliveries",
+  },
+
+  'POST /api/v1/delivery/update-delivery-status': { action: 'delivery/update-delivery-status' },
+
+  'POST /api/v1/delivery/get-delivery': { action: 'delivery/get-delivery' },
+
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
@@ -195,6 +204,13 @@ module.exports.routes = {
 
   "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
 
+
+
+  //feedbacks
+  'POST /api/v1/feedbacks/add-feedback': { action: 'feedbacks/add-feedback' },
+
+  'POST /api/v1/feedbacks/edit-feedback': { action: 'feedbacks/edit-feedback' },
+  'POST /api/v1/feedbacks/delete-feedbacks': { action: 'feedbacks/delete-feedbacks' },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
