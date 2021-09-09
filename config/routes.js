@@ -204,6 +204,10 @@ module.exports.routes = {
 
   "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
 
+
+
+  //feedbacks
+  'POST /api/v1/feedbacks/add-feedback': { action: 'feedbacks/add-feedback' },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
