@@ -10,7 +10,7 @@ module.exports = {
   },
 
   exits: {},
-
+  //delete sub category
   fn: async function (inputs, exits) {
     var cat = await ItemSubCategory.findOne({ id: inputs.id });
 

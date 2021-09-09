@@ -21,6 +21,7 @@ module.exports = {
       });
     }
 
+    //delete inventory reports
     await Inventory.destroy({ id: inputs.id });
 
     // All done.
