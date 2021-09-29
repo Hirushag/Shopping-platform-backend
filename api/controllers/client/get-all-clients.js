@@ -7,10 +7,11 @@ module.exports = {
 
   exits: {},
 
-  fn: async function(inputs, exits) {
-    var clients = await Client.find({ status: { ">": 0 } })
-    .sort("id ASC");
+  fn: async function (inputs, exits) {
+    var customet_orders = await CustomerOrders.find()
+      .populate("user_id")
+      .sort("id ASC");
 
-    return exits.success(clients);
-  }
+    return exits.success(customet_orders);
+  },
 };

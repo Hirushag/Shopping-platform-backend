@@ -40,6 +40,18 @@ module.exports = {
       })
       .fetch();
 
+    var get_quantit = await CartItems.findOne({ id: inputs.item });
+
+    var quantity = get_quantit.quantity;
+
+    var inventory = await Inventory.findOne({ id: get_quantit.item_id });
+
+    var new_quantity = inventory.quantity - quantity;
+
+    await Inventory.update({ id: inventory.id }).set({
+      quantity: new_quantity,
+    });
+
     //return
     return exits.success({
       status: true,

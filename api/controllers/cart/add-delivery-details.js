@@ -94,6 +94,12 @@ module.exports = {
         email: inputs.email,
         status: 0,
       }).fetch();
+      var customer_order = await CustomerOrders.create({
+        user_id: payments.user,
+        payment_id: payments.id,
+        status: 0,
+        order_id: delivery.id,
+      }).fetch();
     } else if (inputs.payment_method == "ONLINE PAYMENT") {
       var payments = await Payment.create({
         method: inputs.payment_method,
@@ -113,6 +119,14 @@ module.exports = {
         email: inputs.email,
         status: 0,
       }).fetch();
+      var customer_order = await CustomerOrders.create({
+        user_id: payments.user,
+        payment_id: payments.id,
+        status: 0,
+        order_id: delivery.id,
+      }).fetch();
+
+      console.log(inputs.card_number);
 
       var card = await CardDetails.create({
         user_id: this.req.token.id,
@@ -143,6 +157,12 @@ module.exports = {
         city: inputs.city,
         email: inputs.email,
         status: 0,
+      }).fetch();
+      var customer_order = await CustomerOrders.create({
+        user_id: payments.user,
+        payment_id: payments.id,
+        status: 0,
+        order_id: delivery.id,
       }).fetch();
     }
 

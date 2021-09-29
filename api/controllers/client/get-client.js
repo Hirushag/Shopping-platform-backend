@@ -6,21 +6,25 @@ module.exports = {
   inputs: {
     id: {
       required: true,
-      type: "number"
-    }
+      type: "number",
+    },
   },
 
   exits: {},
 
-  fn: async function(inputs, exits) {
-    var client = await Client.findOne({ id: inputs.id });
+  fn: async function (inputs, exits) {
+    var customet_order = await CustomerOrders.findOne({
+      id: inputs.id,
+    })
+      .populate("user_id")
+      .populate("order_id");
 
-    if (!client) {
+    if (!customet_order) {
       return exits.success({
-        status: false
+        status: false,
       });
     } else {
-      return exits.success(client);
+      return exits.success(customet_order);
     }
-  }
+  },
 };

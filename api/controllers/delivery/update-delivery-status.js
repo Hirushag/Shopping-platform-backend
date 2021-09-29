@@ -1,11 +1,7 @@
 module.exports = {
+  friendlyName: "Update delivery status",
 
-
-  friendlyName: 'Update delivery status',
-
-
-  description: '',
-
+  description: "",
 
   inputs: {
     id: {
@@ -16,18 +12,17 @@ module.exports = {
       required: true,
       type: "number",
     },
-
+    rider: {
+      allowNull: true,
+      type: "number",
+    },
   },
 
-
   exits: {
-
     OtherError: {
       responseType: "HandleError",
     },
-
   },
-
 
   fn: async function (inputs, exits) {
     var delivery = await Delivery.findOne({ id: inputs.id });
@@ -39,6 +34,7 @@ module.exports = {
     }
     var updatestatus = await Delivery.update({ id: inputs.id }).set({
       status: inputs.status,
+      rider: inputs.rider,
     });
 
     await SystemLog.create({
