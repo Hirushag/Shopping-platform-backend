@@ -8,6 +8,8 @@ module.exports = {
 
 
   inputs: {
+    id: { type: "number" },
+    feedback: { type: "string" },
 
   },
 
@@ -17,12 +19,19 @@ module.exports = {
   },
 
 
-  fn: async function (inputs) {
+  fn: async function (inputs, exits) {
+    await Feedback.update({ id: inputs.id }).set({
+      feedback: inputs.feedback,
+    });
+
+    var feedback = await Feedback.findOne({ id: inputs.id });
+
+    await SystemLog.create({
+      userid: this.req.token.id,
+      info: "Feedback Edited" + feedback.id,
+    });
 
     // All done.
-    return;
-
-  }
-
-
+    return exits.success({ status: true });
+  },
 };
