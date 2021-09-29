@@ -15,7 +15,7 @@ module.exports = {
 
     user_id: { model: "User" },
     name: { type: "string" },
-    card_number: { type: "number" },
+    card_number: { type: "string" },
     month: { type: "string" },
     year: { type: "number" },
     cvv: { type: "number" },

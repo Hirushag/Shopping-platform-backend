@@ -48,7 +48,13 @@ module.exports = {
       price: inputs.price,
     }).fetch();
 
-    console.log(cart);
+    var inventory = await Inventory.findOne({ id: cart_items.item_id });
+
+    var new_quantity = inventory.quantity + cart_items.quantity;
+
+    await Inventory.update({ id: inventory.id }).set({
+      quantity: new_quantity,
+    });
 
     return exits.success({
       status: true,
