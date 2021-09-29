@@ -90,6 +90,12 @@ module.exports.routes = {
 
   "POST /api/v1/items/add-to-cart": { action: "items/add-to-cart" },
 
+  "POST /api/v1/items/add-to-wish-list": { action: "items/add-to-wish-list" },
+
+  "GET /api/v1/items/get-all-wishlists": { action: "items/get-all-wishlists" },
+  "POST /api/v1/items/delete-item-from-wishlist": {
+    action: "items/delete-item-from-wishlist",
+  },
   "GET /api/v1/cart/get-cart-items": { action: "cart/get-cart-items" },
 
   "POST /api/v1/cart/update-quantity": { action: "cart/update-quantity" },
@@ -102,14 +108,18 @@ module.exports.routes = {
   },
 
   //delivery
-  "GET /delivery/view-all-deliveries": {
-    action: "delivery/view-all-deliveries",
+  "GET /api/v1/delivery/get-all-deliveries": {
+    action: "delivery/get-all-deliveries",
   },
-
   'POST /api/v1/delivery/update-delivery-status': { action: 'delivery/update-delivery-status' },
 
   'POST /api/v1/delivery/get-delivery': { action: 'delivery/get-delivery' },
+  "POST /api/v1/delivery/add-rider": { action: "delivery/add-rider" },
 
+  "GET /api/v1/delivery/get-all-riders": { action: "delivery/get-all-riders" },
+
+  "POST /api/v1/delivery/edit-rider": { action: "delivery/edit-rider" },
+  "POST /api/v1/delivery/delete-rider": { action: "delivery/delete-rider" },
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
@@ -211,6 +221,9 @@ module.exports.routes = {
 
   'POST /api/v1/feedbacks/edit-feedback': { action: 'feedbacks/edit-feedback' },
   'POST /api/v1/feedbacks/delete-feedbacks': { action: 'feedbacks/delete-feedbacks' },
+  "GET /api/v1/feedbacks/get-all-feedbacks": {
+    action: "feedbacks/get-all-feedbacks",
+  },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝

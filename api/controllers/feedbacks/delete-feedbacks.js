@@ -8,6 +8,9 @@ module.exports = {
 
 
   inputs: {
+    id: {
+      type: "number",
+    },
 
   },
 
@@ -17,12 +20,15 @@ module.exports = {
   },
 
 
-  fn: async function (inputs) {
+  fn: async function (inputs, exits) {
+    await Feedback.destroy({ id: inputs.id });
+
+    await SystemLog.create({
+      userid: this.req.token.id,
+      info: "Feedback Deleted" + inputs.id,
+    });
 
     // All done.
-    return;
-
-  }
-
-
+    return exits.success({ status: true });
+  },
 };
