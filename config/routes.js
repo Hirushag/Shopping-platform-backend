@@ -113,7 +113,7 @@ module.exports.routes = {
   "GET /api/v1/delivery/get-all-riders": { action: "delivery/get-all-riders" },
 
   "POST /api/v1/delivery/edit-rider": { action: "delivery/edit-rider" },
-  
+  "POST /api/v1/delivery/delete-rider": { action: "delivery/delete-rider" },
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },
