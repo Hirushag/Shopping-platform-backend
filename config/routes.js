@@ -102,14 +102,18 @@ module.exports.routes = {
   },
 
   //delivery
-  "GET /delivery/view-all-deliveries": {
-    action: "delivery/view-all-deliveries",
+  "GET /api/v1/delivery/get-all-deliveries": {
+    action: "delivery/get-all-deliveries",
   },
-
   'POST /api/v1/delivery/update-delivery-status': { action: 'delivery/update-delivery-status' },
 
   'POST /api/v1/delivery/get-delivery': { action: 'delivery/get-delivery' },
+  "POST /api/v1/delivery/add-rider": { action: "delivery/add-rider" },
 
+  "GET /api/v1/delivery/get-all-riders": { action: "delivery/get-all-riders" },
+
+  "POST /api/v1/delivery/edit-rider": { action: "delivery/edit-rider" },
+  "POST /api/v1/delivery/delete-rider": { action: "delivery/delete-rider" },
   //suppliers
 
   "POST /api/v1/suppliers/add-supplier": { action: "suppliers/add-supplier" },

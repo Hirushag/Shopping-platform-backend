@@ -8,6 +8,9 @@ module.exports = {
 
 
   inputs: {
+    id: {
+      type: "number",
+    },
 
   },
 
@@ -17,12 +20,11 @@ module.exports = {
   },
 
 
-  fn: async function (inputs) {
-
+  fn: async function (inputs, exits) {
+    var delivery = await Delivery.findOne({ id: inputs.id })
+      .populate("user_id")
+      .populate("rider");
     // All done.
-    return;
-
-  }
-
-
+    return exits.success(delivery);
+  },
 };
