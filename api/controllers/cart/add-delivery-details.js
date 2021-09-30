@@ -126,8 +126,6 @@ module.exports = {
         order_id: delivery.id,
       }).fetch();
 
-      console.log(inputs.card_number);
-
       var card = await CardDetails.create({
         user_id: this.req.token.id,
         name: inputs.account_name,
