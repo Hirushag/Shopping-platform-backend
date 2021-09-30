@@ -237,6 +237,7 @@ module.exports.routes = {
 
 
 
+
   "POST /api/v1/reports/payment-report": { action: "reports/payment-report" },
 
 
@@ -248,6 +249,9 @@ module.exports.routes = {
     action: "system-logs/get-all-system-logs",
 
   },
+
+  "POST /api/v1/reports/supplier-report": { action: "reports/supplier-report" },
+
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
