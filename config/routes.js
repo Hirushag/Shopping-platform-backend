@@ -234,6 +234,7 @@ module.exports.routes = {
   "POST /api/v1/reports/inventory-report": {
     action: "reports/inventory-report",
   },
+  "POST /api/v1/reports/supplier-report": { action: "reports/supplier-report" },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
