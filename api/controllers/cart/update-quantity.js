@@ -26,7 +26,6 @@ module.exports = {
 
   //function for manage quantity
   fn: async function (inputs, exits) {
-    console.log(inputs.item);
     var finditem = await CartItems.findOne({ id: inputs.item });
 
     var new_quantity = finditem.quantity + inputs.quantity;
