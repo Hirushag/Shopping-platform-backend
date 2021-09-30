@@ -228,6 +228,12 @@ module.exports.routes = {
   "GET /api/v1/feedbacks/get-all-feedbacks": {
     action: "feedbacks/get-all-feedbacks",
   },
+
+  //reports
+
+  "POST /api/v1/reports/inventory-report": {
+    action: "reports/inventory-report",
+  },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
