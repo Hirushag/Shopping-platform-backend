@@ -234,6 +234,20 @@ module.exports.routes = {
   "POST /api/v1/reports/inventory-report": {
     action: "reports/inventory-report",
   },
+
+
+
+  "POST /api/v1/reports/payment-report": { action: "reports/payment-report" },
+
+
+
+  //system logs
+
+   "GET /api/v1/system-logs/get-all-system-logs": {
+
+    action: "system-logs/get-all-system-logs",
+
+  },
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
   //  ╚╩╝╚═╝╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝
