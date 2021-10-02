@@ -83,6 +83,10 @@ module.exports = {
         status: 0,
       }).fetch();
 
+
+    
+
+
       var delivery = await Delivery.create({
         user_id: payments.user,
         payment_id: payments.id,
@@ -92,7 +96,7 @@ module.exports = {
         address2: inputs.address2,
         city: inputs.city,
         email: inputs.email,
-        status: 0,
+        status: 5,
       }).fetch();
       var customer_order = await CustomerOrders.create({
         user_id: payments.user,
@@ -117,7 +121,7 @@ module.exports = {
         address2: inputs.address2,
         city: inputs.city,
         email: inputs.email,
-        status: 0,
+        status: 5,
       }).fetch();
       var customer_order = await CustomerOrders.create({
         user_id: payments.user,
@@ -154,7 +158,7 @@ module.exports = {
         address2: inputs.address2,
         city: inputs.city,
         email: inputs.email,
-        status: 0,
+        status: 5,
       }).fetch();
       var customer_order = await CustomerOrders.create({
         user_id: payments.user,
